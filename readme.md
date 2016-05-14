@@ -1,6 +1,6 @@
 # DreamPC Website
 
-A new implementation of the companie&#39;s website using Roots.cx
+A new implementation of the website using Roots.cx
 
 ### Setup
 

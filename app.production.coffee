@@ -1,4 +1,4 @@
-axis         = require 'axis'
+bootstrap    = require 'bootstrap'
 rupture      = require 'rupture'
 autoprefixer = require 'autoprefixer-stylus'
 js_pipeline  = require 'js-pipeline'
@@ -13,4 +13,4 @@ module.exports =
   ]
 
   stylus:
-    use: [axis(), rupture(), autoprefixer()]
+    use: [bootstrap(), rupture(), autoprefixer()]

@@ -1,9 +1,14 @@
 {
   "name": "-dream-p-c-website",
-  "description": "A new implementation of the companie&#39;s website using Roots.cx",
+  "description": "A new implementation of the website using Roots.cx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yurivyatkin/dreampc-roots"
+  },
   "dependencies": {
     "autoprefixer-stylus": "0.9.x",
-    "axis": "0.6.x",
+    "bootstrap-styl": "^5.0.5",
     "coffee-script": "1.x",
     "css-pipeline": "0.3.x",
     "jade": "1.x",
