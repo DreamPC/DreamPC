@@ -1,4 +1,4 @@
-bootstrap    = require 'bootstrap'
+bootstrap    = require 'bootstrap-styl'
 rupture      = require 'rupture'
 autoprefixer = require 'autoprefixer-stylus'
 js_pipeline  = require 'js-pipeline'

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+  .mainPart.jumbotron
+    .container
+      .row
+        .col-sm-6
+          h2 Need help?
+          p
+            | If you have problems with your computer, printer, tablet or cell phone, we are ready to help. Please call us now
+            tel 022 080 5577
+            |  to make an appointment, and some of our friendly team members will be assigned to sort out the issue in a fast and confident manner.
+        .col-sm-6
+          form(action='//formspree.io/formspree2345@dreampc.co.nz', method='POST')
+            input.form-control(type='text', name='name', placeholder='Your name')
+            br
+            input.form-control(type='email', name='_replyto', placeholder='Your email')
+            br
+            input(name='_gotcha', style='display:none', type='text')
+            textarea.form-control(name='message', rows='6', placeholder='Brief description of your problem')
+            br
+            input.btn.btn-default(type='submit', value='Send')

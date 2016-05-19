@@ -1,27 +1,67 @@
 extends layout
 
 block content
-  h3 Welcome to DreamPC!
-  :marked
-    Find tutorials and documentation at http://roots.cx : )
 
-    #### A test of jQuery and Bootstrap
+  #centralPart.hidden-xs
+    .container
+      #myCarousel.carousel.slide
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          li(data-target='#myCarousel', data-slide-to='1')
+          li(data-target='#myCarousel', data-slide-to='2')
+        // Wrapper for slides
+        .carousel-inner(role='listbox')
+          .item.active
+            img(src='img/creatives-desk.jpg', alt='Computers')
+            .carousel-caption
+              h3 We help you with computers!
+              p Get prompt and focused advice based on years of experience
+          .item
+            img(src='img/milk-no-sugar.jpg', alt='Networks')
+            .carousel-caption
+              h3 We work Auckland-wide!
+              p Have an engineer come to your place when convenient
+          .item
+            img(src='img/working-outside.jpg', alt='Projects')
+            .carousel-caption
+              h3 We work until late...
+              p Anytime anywhere in Auckland, just make an appointment!
+        // Left and right controls
+        a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+          i.fa.fa-chevron-left(aria-hidden='true')
+          span.sr-only Previous
+        a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+          i.fa.fa-chevron-right(aria-hidden='true')
+          span.sr-only Next
 
-    Just to make sure that everything is working fine before we proceed.
-
-  // Modal
-  .modal.fade#myModal(tabindex="-1" role="dialog")
-    .modal-dialog
-      .modal-content
-        .modal-header
-          button(type="button" class="close" data-dismiss="modal" arial-label="Close")
-            span(aria-hidden="true") &times;
-          h4.modal-title Modal title
-        .modal-body
-          p One fine body &hellip;
-        .modal-footer
-          button(type="button" class="btn btn-default" data-dismiss="modal") Close
-          button(type="button" class="btn btn-primary") Save changes
-  // Modal trigger
-  button(type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal").
-    Launch  demo modal
+  #features
+    .container
+      #features.row
+        #repairs.col-sm-4
+          span.fa-stack.fa-3x.feature-icon
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-desktop.fa-stack-1x.fa-inverse
+          h3 Taming computers
+          .clearfix
+          p
+            | Call us if you need any help with your computer. We do all sorts of repairs, cleanings, fine-tunings and upgrades.  Our staff works in a fast, confident, and friendly manner. Your time is precious, and we value your business.
+            br
+            strong No fix - no pay.
+        #network.col-sm-4
+          span.fa-stack.fa-3x.feature-icon
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-cubes.fa-stack-1x.fa-inverse
+          h3 Fitting networks
+          .clearfix
+          p
+            | More and more pieces of technology are coming in, and they tend to work together. Call us when the things get tricky and you need a hand. We have the knowledge and experience necessary to make your computers, devices and appliances work concordantly.
+        #projects.col-sm-4
+          span.fa-stack.fa-3x.feature-icon
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-money.fa-stack-1x.fa-inverse
+          h3 Reducing costs
+          .clearfix
+          p
+            | We respect your time and money, and understand that technology is just an investment for most of our customers. If you need to find a solution that serves your business goals and fits your budget requirements - call us for a consultation with a specialist.
+            br
+            strong We can do IT!
