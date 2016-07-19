@@ -9,6 +9,7 @@ body
 
 tel
   font-weight bold
+  margin 0.2em
   & > a
     text-decoration none
     color white
@@ -24,6 +25,12 @@ tel
     &:visited
       text-decoration none
       color white
+
+// A temporary hack
+// to mitigate a weird discrepancy
+// between local and hosted renders
+.fa-phone-square
+    margin 0.2em
 
 #header
   background #AA7539
