@@ -1,3 +1,8 @@
+- var menu = { 'index': 'Home', 'prices': 'Prices', 'location': 'Location', 'contactus': 'Contact Us' }
+
+block link
+  - var selected = 'index'; //default
+
 .navbar.navbar-default.navbar-fixed-top
   .container
     #slogan.navbar-header
@@ -7,6 +12,13 @@
         span.icon-bar
     #myNavbar.collapse.navbar-collapse
       ul.nav.navbar-nav.pull-right
+        each val, key in menu
+          li
+            if selected === key
+              a.active(href=key+'.html', title=val)= val
+            else
+              a(href=key+'.html', title=val)= val
+//
         li
           a(href='index.html') Home
         li
